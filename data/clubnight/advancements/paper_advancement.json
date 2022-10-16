@@ -1,0 +1,14 @@
+{
+    "criteria": {
+        "useItem":{
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "entity": {"type": "villager","nbt": "{ArmorItems:[{id:\"minecraft:turtle_helmet\", tag:{Special:1}}]}"}
+            }
+        }
+    },
+    "rewards": {
+        "function": "clubnight:achievment",
+        "loot": ["clubnight:head-giver"]
+    }
+}
