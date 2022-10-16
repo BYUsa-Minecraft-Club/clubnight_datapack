@@ -1,0 +1,4 @@
+{
+    "function": "set_nbt",
+    "tag": "{team:unassigned, display:{color:5066061,Name:'[{\"text\":\"Unassigned Team\",\"italic\":false}]'}}"
+}

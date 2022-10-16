@@ -1,0 +1,4 @@
+{
+    "function": "set_nbt",
+    "tag": "{team:RED, Unbreakable:1,display:{color:11546150,Name:'[{\"text\":\"Red Team\",\"italic\":false}]'}}"
+}
