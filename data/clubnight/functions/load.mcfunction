@@ -1,11 +1,3 @@
-say I'm working great!
-team add RED
-team add BLUE
-team add GREEN
-team add unassigned
-team modify RED color red
-team modify BLUE color blue
-team modify GREEN color green
 scoreboard objectives add clubstatus dummy
 scoreboard objectives add headsearned dummy
 scoreboard objectives add lastclubnight dummy
