@@ -1,0 +1,1 @@
+summon villager ~ ~ ~ {CustomName:'{"text":"HeadGiver"}',NoAI: 1b,Invulnerable: 1b,  PersistenceRequired: 1b, ArmorItems: [{}, {}, {},  {id: "minecraft:turtle_helmet", Count: 1b, tag: {Special: "HeadGiver", Damage: 0}}], VillagerData: {profession: "minecraft:nitwit", level: 1, type: "minecraft:plains"}}

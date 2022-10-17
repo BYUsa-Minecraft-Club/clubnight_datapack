@@ -1,2 +1,2 @@
-scoreboard players set club_night inGame 1
-scoreboard players set club_night currentTeam 0
+scoreboard players set clubnight clubstatus 2
+scoreboard players set clubnight currentTeam 0

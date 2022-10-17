@@ -1,2 +1,2 @@
-scoreboard players set club_night inGame 0
+scoreboard players set clubnight clubstatus 1
 function clubnight:clearteams

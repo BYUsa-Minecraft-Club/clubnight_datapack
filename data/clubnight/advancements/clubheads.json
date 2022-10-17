@@ -3,12 +3,12 @@
         "useItem":{
             "trigger": "minecraft:player_interacted_with_entity",
             "conditions": {
-                "entity": {"type": "villager","nbt": "{ArmorItems:[{id:\"minecraft:turtle_helmet\", tag:{Special:1}}]}"}
+                "entity": {"type": "villager","nbt": "{ArmorItems:[{tag:{Special:\"HeadGiver\"}}]}"}
             }
         }
     },
     "rewards": {
-        "function": "clubnight:achievment",
+        "function": "clubnight:on_head_given",
         "loot": ["clubnight:head-giver"]
     }
 }

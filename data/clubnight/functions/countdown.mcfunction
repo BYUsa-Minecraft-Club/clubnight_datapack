@@ -1,0 +1,1 @@
+scoreboard players set clubnight countdowncount 80
