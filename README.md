@@ -8,7 +8,7 @@ Automatic coloring of helmets for each team.
 Head-giver villager which give players their head for each club night attended. 
 
 
-function:
+function: (to use any function run /function clubnight:function_name)
 * clearteams: removes current teams/if game is on will simply reroll teams
 * countdown: initiates a countdown. Is displayed in chat and as titles to those in clubnight.
 * endclubnight: removes all tags/teams and cosmo

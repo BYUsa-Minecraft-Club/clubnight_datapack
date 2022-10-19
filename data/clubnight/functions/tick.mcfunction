@@ -3,7 +3,7 @@ execute if score clubnight clubstatus matches 2 run function clubnight:gametick
 
 
 execute if score @p headsearned matches 1.. run advancement revoke @p[scores={headsearned=1..}] only clubnight:clubheads
-execute if score clubnight clubstatus matches 0 if entity @e[tag=clubnight] run tag @e[tag=clubnight] remove clubnight
+execute if score clubnight clubstatus matches 0 if entity @p[tag=clubnight] run tag @p[tag=clubnight] remove clubnight
 
 execute if score clubnight countdowncount matches 80 run say 3
 execute if score clubnight countdowncount matches 80 run title @p[tag=clubnight] title 3
