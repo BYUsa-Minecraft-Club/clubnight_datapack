@@ -6,6 +6,7 @@ Automatic tagging of players at clubnight using cosmo.
 Automatic team creation and randomization. (supports up to 6 teams)
 Automatic coloring of helmets for each team.
 Head-giver villager which give players their head for each club night attended. 
+Allows players to teleport to clubnight
 
 ## Basic Use
 The following are the basic guide on how to use the features. 
@@ -28,6 +29,9 @@ The headgiver is a villager that will grant heads to players that have earned th
 The headgiver is summoned using summonheadgiver. The headgiver can be permanently summoned allowing players to claim their earned heads at their leisure. 
 
 To manually grant a player the ability to claim a head (perhaps as an additional reward). Use the command `\scoreboard players add PLAYER_NAME headsearned 1`. 
+
+#### Teleport
+While clubnight is active any player can teleport to the nearest cosmo using the command `\trigger ClubNightTeleport`. This ability only works while the clubnight is active.
 
 
 ### Game
