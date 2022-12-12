@@ -1,5 +1,5 @@
-execute if score clubnight clubstatus matches 1 run function clubnight:clubtick 
-execute if score clubnight clubstatus matches 2 run function clubnight:gametick 
+#execute if score clubnight clubstatus matches 1.. run function clubnight:clubtick 
+execute if score clubnight clubstatus matches 2.. run function clubnight:gametick 
 
 
 execute if score @p headsearned matches 1.. run advancement revoke @p[scores={headsearned=1..}] only clubnight:clubheads

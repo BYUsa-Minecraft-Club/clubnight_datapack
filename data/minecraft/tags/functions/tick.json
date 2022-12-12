@@ -1,5 +1,6 @@
 {
     "values": [
-        "clubnight:tick"
+        "clubnight:tick",
+        "clubnight:clubtick"
     ]
 }
