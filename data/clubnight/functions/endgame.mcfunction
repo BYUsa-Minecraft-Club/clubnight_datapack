@@ -6,4 +6,4 @@ team remove GREEN
 team remove YELLOW
 team remove PURPLE
 team remove ORANGE
-
+scoreboard objectives remove clubteamsuccess

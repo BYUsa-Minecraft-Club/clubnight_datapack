@@ -12,18 +12,20 @@ execute if entity @a[tag=clubnight,tag=orange_team,team=!ORANGE] run team join O
 execute if entity @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "RED"}}]}] run team join RED @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "RED"}}]}]
 execute if entity @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "BLUE"}}]}] run team join BLUE @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "BLUE"}}]}]
 execute if entity @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "GREEN"}}]}] run team join GREEN @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "GREEN"}}]}]
-execute if entity @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "YELLOW"}}]}] run team join YELLOw @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "YELLOw"}}]}]
+execute if entity @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "YELLOW"}}]}] run team join YELLOW @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "YELLOw"}}]}]
 execute if entity @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "PURPLE"}}]}] run team join PURPLE @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "PURPLE"}}]}]
 execute if entity @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "ORANGE"}}]}] run team join ORANGE @a[tag=clubnight,team=,nbt={Inventory:[{Slot: 103b,tag: {team: "ORANGE"}}]}]
 # add new players in game to team 
-execute if entity @a[tag=clubnight,team=] run scoreboard players add clubnight currentTeam 1
+scoreboard players set clubnight clubteamsuccess 0
+execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 0 store success score clubnight clubteamsuccess run team join RED @a[sort=random,tag=clubnight,team=,limit=1] 
+execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 1 store success score clubnight clubteamsuccess run team join BLUE @a[sort=random,tag=clubnight,team=,limit=1] 
+execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 2 store success score clubnight clubteamsuccess run team join GREEN @a[sort=random,tag=clubnight,team=,limit=1] 
+execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 3 store success score clubnight clubteamsuccess run team join YELLOW @a[sort=random,tag=clubnight,team=,limit=1] 
+execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 4 store success score clubnight clubteamsuccess run team join PURPLE @a[sort=random,tag=clubnight,team=,limit=1] 
+execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 5 store success score clubnight clubteamsuccess run team join ORANGE @a[sort=random,tag=clubnight,team=,limit=1] 
+
+execute if score clubnight clubteamsuccess matches 1 run scoreboard players add clubnight currentTeam 1
 execute if score clubnight currentTeam >= clubnight numTeams run scoreboard players set clubnight currentTeam 0
-execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 0 run team join RED @a[sort=random,tag=clubnight,team=,limit=1] 
-execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 1 run team join BLUE @a[sort=random,tag=clubnight,team=,limit=1] 
-execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 2 run team join GREEN @a[sort=random,tag=clubnight,team=,limit=1] 
-execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 3 run team join YELLOW @a[sort=random,tag=clubnight,team=,limit=1] 
-execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 4 run team join PURPLE @a[sort=random,tag=clubnight,team=,limit=1] 
-execute if entity @a[tag=clubnight,team=] if score clubnight currentTeam matches 5 run team join ORANGE @a[sort=random,tag=clubnight,team=,limit=1] 
 
 
 # add tag to players in team
@@ -56,7 +58,7 @@ execute if entity @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "YEL
 execute if entity @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "PURPLE"}}]}] run tag @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "PURPLE"}}]}] add clubnight
 execute if entity @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "ORANGE"}}]}] run tag @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "ORANGE"}}]}] add clubnight
 
-# if a player has a helmet but is not in a team add them
+# if a player has a helmet but is not in a team add them does not work
 execute if entity @a[team=!RED,nbt={Inventory:[{Slot: 103b,tag: {team: "RED"}}]}] run team join RED @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "RED"}}]}]
 execute if entity @a[team=!BLUE,nbt={Inventory:[{Slot: 103b,tag: {team: "BLUE"}}]}] run team join BLUE @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "BLUE"}}]}]
 execute if entity @a[team=!GREEN,nbt={Inventory:[{Slot: 103b,tag: {team: "GREEN"}}]}] run team join GREEN @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "GREEN"}}]}]
@@ -64,7 +66,7 @@ execute if entity @a[team=!YELLOW,nbt={Inventory:[{Slot: 103b,tag: {team: "YELLO
 execute if entity @a[team=!PURPLE,nbt={Inventory:[{Slot: 103b,tag: {team: "PURPLE"}}]}] run team join PURPLE @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "PURPLE"}}]}]
 execute if entity @a[team=!ORANGE,nbt={Inventory:[{Slot: 103b,tag: {team: "ORANGE"}}]}] run team join ORANGE @a[tag=!clubnight,nbt={Inventory:[{Slot: 103b,tag: {team: "ORANGE"}}]}]
 
-#if a player has an unassigned helmet and in a team change helmet to appropriate thing
+#if a player has an unassigned helmet and in a team change helmet to appropriate thing works
 execute if entity @a[team=BLUE,nbt={Inventory:[{Slot: 103b,tag: {team: "unassigned"}}]}] run item modify entity @a[team=BLUE,nbt={Inventory:[{Slot: 103b,tag: {team: "unassigned"}}]}] armor.head clubnight:blue_team
 execute if entity @a[team=RED,nbt={Inventory:[{Slot: 103b,tag: {team: "unassigned"}}]}] run item modify entity @a[team=RED,nbt={Inventory:[{Slot: 103b,tag: {team: "unassigned"}}]}] armor.head clubnight:red_team
 execute if entity @a[team=GREEN,nbt={Inventory:[{Slot: 103b,tag: {team: "unassigned"}}]}] run item modify entity @a[team=GREEN,nbt={Inventory:[{Slot: 103b,tag: {team: "unassigned"}}]}] armor.head clubnight:green_team

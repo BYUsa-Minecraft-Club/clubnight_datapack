@@ -12,3 +12,4 @@ team modify PURPLE color dark_purple
 team modify ORANGE color gold
 scoreboard players set clubnight clubstatus 2
 scoreboard players set clubnight currentTeam 0
+scoreboard objectives add clubteamsuccess dummy
