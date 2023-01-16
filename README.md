@@ -21,7 +21,7 @@ Cosmo is central to the clubnight features. Cosmo is summoned using the function
 Any player near a cosmo recieves the tag `clubnight`. If needed a player can be manually tagged and all features will work but the primary method should be by proximity to cosmo. The `clubnight` tag is automatically removed from all players when clubnight is not active (after the function endclubnight is called). It is not possible for a player to have the `clubnight` tag without clubnight being started as the datapack will remove it. 
 
 
-The tag can be used to grant effects or teleport all players at clubnight using `@p[tag=clubnight]`. For instance `tp @p[tag=clubnight] ~ ~ ~` will teleport all players at clubnight to the player running the command.
+The tag can be used to grant effects or teleport all players at clubnight using `@a[tag=clubnight]`. For instance `tp @a[tag=clubnight] ~ ~ ~` will teleport all players at clubnight to the player running the command.
 
 #### Headgiver
 The headgiver is a villager that will grant heads to players that have earned them. A player is granted the ability to claim a head from the headgiver when they are tagged for the first time on a clubnight. 
@@ -41,7 +41,7 @@ These features involve the handling of teams.
 To control the number of teams use the command `\scoreboard players set clubnight numTeams 2` where 2 is the number of teams. The datapack supports up to 6 teams.  
 
 #### Team assignment
-When the function `startgame` is run the 6 possible teams are created, every player in club night will be randomly assigned a team (number of teams are controlled as described above). The teams can be reassigned using `clearteams`. The teams will fully be removed when the command `endgame` is run. Teams are RED, BULE, GREEN, YELLOW, PURPLE, ORANGE. If a command needs to be run targeting players of a specific team use `@p[team=RED]`, etc.
+When the function `startgame` is run the 6 possible teams are created, every player in club night will be randomly assigned a team (number of teams are controlled as described above). The teams can be reassigned using `clearteams`. The teams will fully be removed when the command `endgame` is run. Teams are RED, BULE, GREEN, YELLOW, PURPLE, ORANGE. If a command needs to be run targeting players of a specific team use `@a[team=RED]`, etc.
 
 #### Team tags
 When a player is assigned a team they are also tagged with a tag red_team, blue_team, etc. This tag makes sure that the teams are not messed up by any server errors that may accidenly clear the teams. 
